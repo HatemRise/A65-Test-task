@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navgraph"
+    app:startDestination="@id/mainScreenFragment">
+
+    <fragment
+        android:id="@+id/mainScreenFragment"
+        android:name="com.example.a65appstest.view.MainScreenFragment"
+        android:label="A65 Test"
+        tools:layout="@layout/main_screen_fragment">
+        <action
+            android:id="@+id/action_mainScreenFragment_to_employeeInfoFragment"
+            app:destination="@id/employeeInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/employeeInfoFragment"
+        android:name="com.example.a65appstest.view.components.EmployeeInfoFragment"
+        android:label="A65 Test Imployee Info"
+        tools:layout="@layout/employee_info_fragment">
+        <argument
+            android:name="employee"
+            app:argType="com.example.a65appstest.repositories.entity_and_models.Employee" />
+    </fragment>
+</navigation>
